@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ardi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+    :root {
+    --sand:#e6dfd3;
+    --beige:#d6cbb8;
+    --taupe:#b7aa95;
+    --olive:#5f6f52;
+    --deep-olive:#3f4a3c;
+    --soil:#4b3f35;
+    --cream:#f7f4ee;
+    --dark:#1f1f1f;
+    --accent:#7a6a4f;
+    }
+    *{box-sizing: border-box;margin: 0; padding: 0;}
+    body{
+        background: var(--cream);
+        color: var(--dark);
+        font-family: 'ibm plex mono', monospace;
+    }
+    .hero{
+        padding: 60px 5vw;
+        background: var(--sand);
+
+    }
+    .logo{
+        font-family: 'playfair display', serif;
+        font-size: 24px;
+        color: var(--deep-olive);
+    }
+    h1{
+        font-family: 'playfair display', serif;
+        font-size: 48px;
+        margin: 20px 0;
+    }
+    h1 em{color: var(--accent);}
+    .hero-cta{
+        background: var(--deep-olive);
+        color: #fff;
+        padding: 14px 30px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .tool-selection{
+        padding: 60px 5vw;
+    }
+    label{
+        font-size: 12px;
+        text-transform: uppercase;
+        opacity: .6;
+    }
+    input, select{
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+    }
+    .analyze-btn{margin-top: 20px;
+    background: var(--deep-olive);
+    color: #fff;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    }
+    .crop-card{
+        background: #fff;
+        border: 1px solid #e0d8cc;
+        padding: 20px;
+    }
+    .crop-name{
+        font-family: 'playfair display', serif;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .stat{
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo"> Ardi-أرضي</div>
+        <h1>plant the <em>right crop</em></h1>
+        <button class="hero-cta" onclick="scrollToTool()">Analyze</button>
+    </div>
+    <div class="tool-selection">
+        <label>Region</label>
+        <select id="region">
+            <option value="irbid">irbid</option>
+        </select>
